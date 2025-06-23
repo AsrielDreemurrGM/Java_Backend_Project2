@@ -9,8 +9,8 @@ import br.com.eaugusto.domain.Client;
 public class ClientDAOMock implements IClientDAO {
 
 	@Override
-	public void register(Client client) {
-
+	public Boolean registerClient(Client client) {
+		return true;
 	}
 
 	@Override

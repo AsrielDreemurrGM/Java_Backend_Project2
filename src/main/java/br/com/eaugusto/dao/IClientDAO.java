@@ -8,10 +8,7 @@ import br.com.eaugusto.domain.Client;
  */
 public interface IClientDAO {
 
-	/**
-	 * @param client
-	 */
-	void register(Client client);
+	Boolean registerClient(Client client);
 
 	Client searchByCpf(String cpf);
 }

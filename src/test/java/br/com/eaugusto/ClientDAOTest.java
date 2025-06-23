@@ -7,22 +7,19 @@ import org.junit.Test;
 import br.com.eaugusto.dao.ClientDAOMock;
 import br.com.eaugusto.dao.IClientDAO;
 import br.com.eaugusto.domain.Client;
-import br.com.eaugusto.services.ClientService;
-import br.com.eaugusto.services.IClientService;
 
 /**
  * @author Eduardo Augusto (github.com/AsrielDreemurrGM/)
- * @since Jun 22, 2025
+ * @since Jun 23, 2025
  */
-public class ClientServiceTest {
+public class ClientDAOTest {
 
-	private IClientService clientService;
+	private IClientDAO clientDao;
 
 	private Client client;
 
-	public ClientServiceTest() {
-		IClientDAO dao = new ClientDAOMock();
-		clientService = new ClientService(dao);
+	public ClientDAOTest() {
+		clientDao = new ClientDAOMock();
 	}
 
 	@Before
@@ -40,14 +37,14 @@ public class ClientServiceTest {
 
 	@Test
 	public void searchClient() {
-		Client searchedClient = clientService.searchByCpf(client.getCpf());
+		Client searchedClient = clientDao.searchByCpf(client.getCpf());
 
 		Assert.assertNotNull(searchedClient);
 	}
 
 	@Test
 	public void registerClient() {
-		Boolean result = clientService.registerClient(client);
+		Boolean result = clientDao.registerClient(client);
 		Assert.assertTrue(result);
 	}
 }

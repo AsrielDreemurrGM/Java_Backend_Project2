@@ -16,8 +16,8 @@ public class ClientService implements IClientService {
 	}
 
 	@Override
-	public void registerClient(Client client) {
-		clientDAO.register(client);
+	public Boolean registerClient(Client client) {
+		return clientDAO.registerClient(client);
 	}
 
 	@Override
