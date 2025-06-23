@@ -24,4 +24,9 @@ public class ClientService implements IClientService {
 	public Client searchByCpf(String cpf) {
 		return clientDAO.searchByCpf(cpf);
 	}
+
+	@Override
+	public void deleteClient(String cpf) {
+		clientDAO.deleteClient(cpf);
+	}
 }

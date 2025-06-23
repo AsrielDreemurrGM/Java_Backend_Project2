@@ -11,4 +11,6 @@ public interface IClientDAO {
 	Boolean registerClient(Client client);
 
 	Client searchByCpf(String cpf);
+
+	void deleteClient(String cpf);
 }

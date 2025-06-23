@@ -47,4 +47,9 @@ public class ClientDAOTest {
 		Boolean result = clientDao.registerClient(client);
 		Assert.assertTrue(result);
 	}
+
+	@Test
+	public void deleteClient() {
+		clientDao.deleteClient(client.getCpf());
+	}
 }

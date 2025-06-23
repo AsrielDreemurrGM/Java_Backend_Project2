@@ -50,4 +50,9 @@ public class ClientServiceTest {
 		Boolean result = clientService.registerClient(client);
 		Assert.assertTrue(result);
 	}
+
+	@Test
+	public void deleteClient() {
+		clientService.deleteClient(client.getCpf());
+	}
 }

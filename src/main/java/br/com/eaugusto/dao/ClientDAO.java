@@ -17,4 +17,9 @@ public class ClientDAO implements IClientDAO {
 	public Client searchByCpf(String cpf) {
 		return null;
 	}
+
+	@Override
+	public void deleteClient(String cpf) {
+
+	}
 }

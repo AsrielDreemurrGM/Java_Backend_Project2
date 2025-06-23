@@ -10,9 +10,7 @@ public interface IClientService {
 
 	Boolean registerClient(Client client);
 
-	/**
-	 * @param cpf
-	 * @return
-	 */
 	Client searchByCpf(String cpf);
+
+	void deleteClient(String cpf);
 }

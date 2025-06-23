@@ -19,4 +19,9 @@ public class ClientDAOMock implements IClientDAO {
 		client.setCpf(cpf);
 		return client;
 	}
+
+	@Override
+	public void deleteClient(String cpf) {
+
+	}
 }
