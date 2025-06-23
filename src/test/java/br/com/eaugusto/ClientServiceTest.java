@@ -55,4 +55,12 @@ public class ClientServiceTest {
 	public void deleteClient() {
 		clientService.deleteClient(client.getCpf());
 	}
+
+	@Test
+	public void modifyClient() {
+		client.setName("Eduardo Augusto");
+		clientService.modifyClient(client);
+
+		Assert.assertEquals("Eduardo Augusto", client.getName());
+	}
 }

@@ -13,4 +13,6 @@ public interface IClientDAO {
 	Client searchByCpf(String cpf);
 
 	void deleteClient(String cpf);
+
+	void modifyClient(Client client);
 }

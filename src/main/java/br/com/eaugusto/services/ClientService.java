@@ -29,4 +29,9 @@ public class ClientService implements IClientService {
 	public void deleteClient(String cpf) {
 		clientDAO.deleteClient(cpf);
 	}
+
+	@Override
+	public void modifyClient(Client client) {
+		clientDAO.modifyClient(client);
+	}
 }

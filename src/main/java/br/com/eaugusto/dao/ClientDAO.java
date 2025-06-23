@@ -22,4 +22,9 @@ public class ClientDAO implements IClientDAO {
 	public void deleteClient(String cpf) {
 
 	}
+
+	@Override
+	public void modifyClient(Client client) {
+
+	}
 }

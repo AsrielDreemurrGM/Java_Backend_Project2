@@ -13,4 +13,6 @@ public interface IClientService {
 	Client searchByCpf(String cpf);
 
 	void deleteClient(String cpf);
+
+	void modifyClient(Client client);
 }
