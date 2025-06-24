@@ -17,21 +17,21 @@ public class ClientService implements IClientService {
 
 	@Override
 	public Boolean registerClient(Client client) {
-		return clientDAO.registerClient(client);
+		return clientDAO.register(client);
 	}
 
 	@Override
 	public Client searchByCpf(String cpf) {
-		return clientDAO.searchByCpf(cpf);
+		return clientDAO.search(cpf);
 	}
 
 	@Override
 	public void deleteClient(String cpf) {
-		clientDAO.deleteClient(cpf);
+		clientDAO.delete(cpf);
 	}
 
 	@Override
 	public void modifyClient(Client client) {
-		clientDAO.modifyClient(client);
+		clientDAO.updateEntity(client);
 	}
 }

@@ -1,18 +1,12 @@
 package br.com.eaugusto.dao;
 
+import br.com.eaugusto.dao.generics.IGenericDAO;
 import br.com.eaugusto.domain.Client;
 
 /**
  * @author Eduardo Augusto (github.com/AsrielDreemurrGM/)
  * @since Jun 22, 2025
  */
-public interface IClientDAO {
+public interface IClientDAO extends IGenericDAO<Client> {
 
-	Boolean registerClient(Client client);
-
-	Client searchByCpf(String cpf);
-
-	void deleteClient(String cpf);
-
-	void modifyClient(Client client);
 }

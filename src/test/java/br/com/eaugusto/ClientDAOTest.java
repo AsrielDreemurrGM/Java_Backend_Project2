@@ -37,26 +37,26 @@ public class ClientDAOTest {
 
 	@Test
 	public void searchClient() {
-		Client searchedClient = clientDao.searchByCpf(client.getCpf());
+		Client searchedClient = clientDao.search(client.getCodeOrCPF());
 
 		Assert.assertNotNull(searchedClient);
 	}
 
 	@Test
 	public void registerClient() {
-		Boolean result = clientDao.registerClient(client);
+		Boolean result = clientDao.register(client);
 		Assert.assertTrue(result);
 	}
 
 	@Test
 	public void deleteClient() {
-		clientDao.deleteClient(client.getCpf());
+		clientDao.delete(client.getCodeOrCPF());
 	}
 
 	@Test
 	public void modifyClient() {
 		client.setName("Eduardo Augusto");
-		clientDao.modifyClient(client);
+		clientDao.updateEntity(client);
 
 		Assert.assertEquals("Eduardo Augusto", client.getName());
 	}

@@ -4,7 +4,7 @@ package br.com.eaugusto.domain;
  * @author Eduardo Augusto (github.com/AsrielDreemurrGM/)
  * @since Jun 22, 2025
  */
-public class Client {
+public class Client implements Persistable {
 
 	private String name;
 	private String cpf;
@@ -16,10 +16,6 @@ public class Client {
 
 	public String getName() {
 		return name;
-	}
-
-	public String getCpf() {
-		return cpf;
 	}
 
 	public String getTelephoneNumber() {
@@ -68,5 +64,10 @@ public class Client {
 
 	public void setState(String state) {
 		this.state = state;
+	}
+
+	@Override
+	public String getCodeOrCPF() {
+		return cpf;
 	}
 }

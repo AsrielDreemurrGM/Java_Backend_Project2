@@ -40,7 +40,7 @@ public class ClientServiceTest {
 
 	@Test
 	public void searchClient() {
-		Client searchedClient = clientService.searchByCpf(client.getCpf());
+		Client searchedClient = clientService.searchByCpf(client.getCodeOrCPF());
 
 		Assert.assertNotNull(searchedClient);
 	}
@@ -53,7 +53,7 @@ public class ClientServiceTest {
 
 	@Test
 	public void deleteClient() {
-		clientService.deleteClient(client.getCpf());
+		clientService.deleteClient(client.getCodeOrCPF());
 	}
 
 	@Test

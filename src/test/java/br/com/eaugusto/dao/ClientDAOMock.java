@@ -1,5 +1,7 @@
 package br.com.eaugusto.dao;
 
+import java.util.Collection;
+
 import br.com.eaugusto.domain.Client;
 
 /**
@@ -9,24 +11,29 @@ import br.com.eaugusto.domain.Client;
 public class ClientDAOMock implements IClientDAO {
 
 	@Override
-	public Boolean registerClient(Client client) {
+	public Boolean register(Client entity) {
 		return true;
 	}
 
 	@Override
-	public Client searchByCpf(String cpf) {
+	public void delete(String value) {
+
+	}
+
+	@Override
+	public void updateEntity(Client entity) {
+
+	}
+
+	@Override
+	public Client search(String value) {
 		Client client = new Client();
-		client.setCpf(cpf);
+		client.setCpf(value);
 		return client;
 	}
 
 	@Override
-	public void deleteClient(String cpf) {
-
-	}
-
-	@Override
-	public void modifyClient(Client client) {
-
+	public Collection<Client> searchAll() {
+		return null;
 	}
 }
