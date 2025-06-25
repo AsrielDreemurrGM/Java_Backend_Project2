@@ -11,6 +11,19 @@ import br.com.eaugusto.services.IProductService;
 import br.com.eaugusto.services.ProductService;
 
 /**
+ * Unit Tests For The {@link ProductService} Class.
+ * 
+ * <p>
+ * This class tests the CRUD operations of the ProductService, ensuring that
+ * registering, searching, deleting, and modifying Product entities behave as
+ * expected.
+ * </p>
+ * 
+ * <p>
+ * Uses a {@link ProductDAOMock} as the data source to isolate the service layer
+ * from persistence concerns during testing.
+ * </p>
+ * 
  * @author Eduardo Augusto (github.com/AsrielDreemurrGM/)
  * @since Jun 25, 2025
  */
