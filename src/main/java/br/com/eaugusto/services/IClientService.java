@@ -1,42 +1,14 @@
 package br.com.eaugusto.services;
 
 import br.com.eaugusto.domain.Client;
+import br.com.eaugusto.services.generics.IGenericService;
 
 /**
- * Interface that defines the client-related business operations.
+ * Client Service Interface Extending Generic CRUD Operations.
  * 
  * @author Eduardo Augusto (github.com/AsrielDreemurrGM/)
- * @since Jun 22, 2025
+ * @since June 22, 2025
  */
-public interface IClientService {
+public interface IClientService extends IGenericService<Client> {
 
-	/**
-	 * Registers a new client.
-	 * 
-	 * @param client the client to register
-	 * @return true if registration is successful
-	 */
-	Boolean registerClient(Client client);
-
-	/**
-	 * Searches for a client using the CPF.
-	 * 
-	 * @param cpf the CPF to search
-	 * @return the found client or null
-	 */
-	Client searchByCpf(String cpf);
-
-	/**
-	 * Deletes a client using their CPF.
-	 * 
-	 * @param cpf the CPF of the client to delete
-	 */
-	void deleteClient(String cpf);
-
-	/**
-	 * Updates the data of an existing client.
-	 * 
-	 * @param client the updated client object
-	 */
-	void modifyClient(Client client);
 }

@@ -2,39 +2,18 @@ package br.com.eaugusto.services;
 
 import br.com.eaugusto.dao.IClientDAO;
 import br.com.eaugusto.domain.Client;
+import br.com.eaugusto.services.generics.GenericService;
 
 /**
- * Service implementation for managing {@link Client} operations. Delegates
- * calls to the configured {@link IClientDAO}.
+ * Client Service Extending GenericService For Reuse Of CRUD Logic, While
+ * Implementing IClientService For Future Client-Specific Methods.
  * 
  * @author Eduardo Augusto (github.com/AsrielDreemurrGM/)
- * @since Jun 22, 2025
+ * @since June 22, 2025
  */
-public class ClientService implements IClientService {
-
-	private IClientDAO clientDAO;
+public class ClientService extends GenericService<Client> implements IClientService {
 
 	public ClientService(IClientDAO clientDAO) {
-		this.clientDAO = clientDAO;
-	}
-
-	@Override
-	public Boolean registerClient(Client client) {
-		return clientDAO.register(client);
-	}
-
-	@Override
-	public Client searchByCpf(String cpf) {
-		return clientDAO.search(cpf);
-	}
-
-	@Override
-	public void deleteClient(String cpf) {
-		clientDAO.delete(cpf);
-	}
-
-	@Override
-	public void modifyClient(Client client) {
-		clientDAO.updateEntity(client);
+		super(clientDAO);
 	}
 }

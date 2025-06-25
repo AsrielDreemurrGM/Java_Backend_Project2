@@ -41,25 +41,25 @@ public class ClientServiceTest {
 
 	@Test
 	public void searchClient() {
-		Client searchedClient = clientService.searchByCpf(client.getCodeOrCPF());
+		Client searchedClient = clientService.search(client.getCodeOrCPF());
 		Assert.assertNotNull(searchedClient);
 	}
 
 	@Test
 	public void registerClient() {
-		Boolean result = clientService.registerClient(client);
+		Boolean result = clientService.register(client);
 		Assert.assertTrue(result);
 	}
 
 	@Test
 	public void deleteClient() {
-		clientService.deleteClient(client.getCodeOrCPF());
+		clientService.delete(client.getCodeOrCPF());
 	}
 
 	@Test
 	public void modifyClient() {
 		client.setName("Eduardo Augusto");
-		clientService.modifyClient(client);
+		clientService.modify(client);
 		Assert.assertEquals("Eduardo Augusto", client.getName());
 	}
 }
