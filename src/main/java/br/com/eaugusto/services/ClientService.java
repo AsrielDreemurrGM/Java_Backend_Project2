@@ -4,6 +4,9 @@ import br.com.eaugusto.dao.IClientDAO;
 import br.com.eaugusto.domain.Client;
 
 /**
+ * Service implementation for managing {@link Client} operations. Delegates
+ * calls to the configured {@link IClientDAO}.
+ * 
  * @author Eduardo Augusto (github.com/AsrielDreemurrGM/)
  * @since Jun 22, 2025
  */

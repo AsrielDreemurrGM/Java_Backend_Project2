@@ -11,13 +11,15 @@ import br.com.eaugusto.services.ClientService;
 import br.com.eaugusto.services.IClientService;
 
 /**
+ * Unit tests for the {@link ClientService} class. Uses {@link ClientDAOMock} as
+ * the data provider.
+ * 
  * @author Eduardo Augusto (github.com/AsrielDreemurrGM/)
  * @since Jun 22, 2025
  */
 public class ClientServiceTest {
 
 	private IClientService clientService;
-
 	private Client client;
 
 	public ClientServiceTest() {
@@ -28,7 +30,6 @@ public class ClientServiceTest {
 	@Before
 	public void init() {
 		client = new Client();
-
 		client.setCpf("12345678910");
 		client.setName("Eduardo");
 		client.setCity("Java City");
@@ -41,7 +42,6 @@ public class ClientServiceTest {
 	@Test
 	public void searchClient() {
 		Client searchedClient = clientService.searchByCpf(client.getCodeOrCPF());
-
 		Assert.assertNotNull(searchedClient);
 	}
 
@@ -60,7 +60,6 @@ public class ClientServiceTest {
 	public void modifyClient() {
 		client.setName("Eduardo Augusto");
 		clientService.modifyClient(client);
-
 		Assert.assertEquals("Eduardo Augusto", client.getName());
 	}
 }

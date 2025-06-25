@@ -1,6 +1,9 @@
 package br.com.eaugusto.domain;
 
 /**
+ * Domain model representing a Client entity. Implements {@link Persistable} for
+ * identification.
+ * 
  * @author Eduardo Augusto (github.com/AsrielDreemurrGM/)
  * @since Jun 22, 2025
  */

@@ -9,13 +9,14 @@ import br.com.eaugusto.dao.IClientDAO;
 import br.com.eaugusto.domain.Client;
 
 /**
+ * Unit tests for the {@link ClientDAOMock} implementation.
+ * 
  * @author Eduardo Augusto (github.com/AsrielDreemurrGM/)
  * @since Jun 23, 2025
  */
 public class ClientDAOTest {
 
 	private IClientDAO clientDao;
-
 	private Client client;
 
 	public ClientDAOTest() {
@@ -25,7 +26,6 @@ public class ClientDAOTest {
 	@Before
 	public void init() {
 		client = new Client();
-
 		client.setCpf("12345678910");
 		client.setName("Eduardo");
 		client.setCity("Java City");
@@ -38,7 +38,6 @@ public class ClientDAOTest {
 	@Test
 	public void searchClient() {
 		Client searchedClient = clientDao.search(client.getCodeOrCPF());
-
 		Assert.assertNotNull(searchedClient);
 	}
 
@@ -57,7 +56,6 @@ public class ClientDAOTest {
 	public void modifyClient() {
 		client.setName("Eduardo Augusto");
 		clientDao.updateEntity(client);
-
 		Assert.assertEquals("Eduardo Augusto", client.getName());
 	}
 }
