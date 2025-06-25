@@ -15,23 +15,6 @@ public class Product implements Persistable {
 	private double value;
 	private String brand;
 
-	/**
-	 * Constructs a Product instance with all attributes.
-	 * 
-	 * @param name        product name
-	 * @param code        unique product code
-	 * @param description product description
-	 * @param value       product price/value
-	 * @param brand       product brand
-	 */
-	public Product(String name, String code, String description, double value, String brand) {
-		this.name = name;
-		this.code = code;
-		this.description = description;
-		this.value = value;
-		this.brand = brand;
-	}
-
 	public String getDescription() {
 		return description;
 	}

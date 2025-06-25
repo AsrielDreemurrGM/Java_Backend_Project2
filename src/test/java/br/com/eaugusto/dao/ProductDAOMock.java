@@ -33,7 +33,13 @@ public class ProductDAOMock implements IProductDAO {
 
 	@Override
 	public Product search(String value) {
-		return new Product("Mocked", value, "Mocked Description", 0.0, "MockBrand");
+		Product product = new Product();
+		product.setCode(value);
+		product.setName("Mocked");
+		product.setDescription("Mocked Description");
+		product.setBrand("MockBrand");
+		product.setValue(0.0);
+		return product;
 	}
 
 	@Override

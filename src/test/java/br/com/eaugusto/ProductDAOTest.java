@@ -26,7 +26,12 @@ public class ProductDAOTest {
 
 	@Before
 	public void init() {
-		product = new Product("Notebook", "ABC123", "Notebook With Intel i7", 4500.00, "Tech");
+		product = new Product();
+		product.setCode("ABC123");
+		product.setName("Notebook");
+		product.setDescription("Notebook With Intel i7");
+		product.setBrand("Tech");
+		product.setValue(4500.00);
 	}
 
 	@Test
