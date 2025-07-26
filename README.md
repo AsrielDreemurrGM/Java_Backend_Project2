@@ -8,12 +8,7 @@
   🔗 <strong>Want to have a look at the first project?</strong>
   Check out <a href="https://github.com/AsrielDreemurrGM/Java_CRUD_Example">Project 1 - Java CRUD Example</a>, it’s the starting point of my Java journey.
 </p>
-<h2>🚧 Project Status</h2>
-<p>
-  This project is currently in active development.<br />
-  While the application is not complete yet, some elements are already in place, DAOs, tests and initial project structures.
-</p>
-<h2>📌 Features (So Far)</h2>
+<h2>📌 Features</h2>
 <ul>
   <li>Application of the <strong>TDD</strong> methodology: tests are created before implementation;</li>
   <li>Usage of <code>Generics</code> for both DAO and Service layers to reduce code repetition;</li>
@@ -22,7 +17,6 @@
   <li>Unit tests using <strong>JUnit 5</strong>, structured for DAO and Service layers with mock implementations for isolation;</li>
   <li>Dependency injection used to wire DAOs into services in the test setup;</li>
   <li>Detailed Javadoc comments across classes and test files;</li>
-  <li>Transition from <code>JOptionPane</code> (used in the first project) to <strong>Swing</strong> components for future UI (Not implemented yet).</li>
 </ul>
 <h2>🗂️ Project Structure</h2>
 <ul>
